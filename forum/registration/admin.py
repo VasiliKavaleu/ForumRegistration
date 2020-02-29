@@ -1,3 +1,4 @@
 from django.contrib import admin
-
-# Register your models here.
+from registration.models import Participants, Good
+admin.site.register(Participants)
+admin.site.register(Good)

@@ -21,6 +21,6 @@ class Good(models.Model):
     # data_add = models.DateField(auto_now=True)
 
     def __str__(self):
-        return self.detail_description, self.theme, self.theme_extended
+        return '{} {} {}'.format(self.detail_description, self.theme, self.theme_extended)
 
 
