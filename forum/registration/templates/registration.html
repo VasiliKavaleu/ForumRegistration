@@ -1,19 +1,16 @@
 {% extends 'base/base.html' %}
 
-    {% block main %}
-
-        <div id="login-form">
-            <h1>Fill out the Form</h1>
-                <fieldset>
-                    <form action="" method="POST">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                    <input type="submit" value="Register">
-                    </form>
-                </fieldset>
-
-        </div>
-
-    {% endblock %}
+{% block main %}
+    <div id="login-form">
+        <h1>Fill out the Form</h1>
+            <fieldset>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                <input type="submit" value="Register">
+                </form>
+            </fieldset>
+    </div>
+{% endblock %}
 
 
