@@ -6,7 +6,7 @@ from django.shortcuts import redirect
 
 def registration(request):
     if request.method == 'POST':
-        form = PostForm(request.POST)  # построение PostForm с данными из формы
+        form = PostForm(request.POST) 
         if form.is_valid():
             participant = form.save()
             participant.save()
@@ -14,6 +14,3 @@ def registration(request):
     else:
         form = PostForm()
     return render(request, 'registration.html', {'form': form})
-
-# def success(request):
-#     return render(request, 'success.html')redirect('success')
